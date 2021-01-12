@@ -38,6 +38,7 @@ c.imshow("Result",nimg)
 c.waitKey(0)
 
 OUTPUT:-
+![i1](https://user-images.githubusercontent.com/72375228/104285244-52e04d00-54d9-11eb-9c41-cfba842ea83a.PNG)
 
 
 

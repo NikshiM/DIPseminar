@@ -84,6 +84,7 @@ OUTPUT:-
 ![i5](https://user-images.githubusercontent.com/72375228/104286388-fbdb7780-54da-11eb-8c15-a085a14732f8.PNG)
 
 ## 5.Write a program to convert color image into different color space.
+
 Color spaces are a way to represent the color channels present in the image that gives the image that particular hue
 BGR color space: OpenCV’s default color space is RGB. 
 HSV color space: It stores color information in a cylindrical representation of RGB color points. It attempts to depict the colors as perceived by the human eye. Hue value varies from 0-179, Saturation value varies from 0-255 and Value value varies from 0-255. 
@@ -113,6 +114,22 @@ cv2.destroyAllWindows()
 OUTPUT:-
 
 ![ii](https://user-images.githubusercontent.com/72375228/104288153-73120b00-54dd-11eb-9634-4c29a761b044.PNG)
+
+## 6.Develop a program to create an image from 2D array.
+
+import numpy as np
+from PIL import Image
+import cv2 as c 
+array = np.zeros([100, 200, 3], dtype=np.uint8)
+array[:,:100] = [150, 128, 0] #Orange left side
+array[:,100:] = [0, 0, 255]   #Blue right side
+img = Image.fromarray(array)
+img.save('flower.jpg')
+img.show()
+
+OUTPUT:-
+
+
 
 
 

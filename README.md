@@ -69,12 +69,12 @@ Image rotation is a common image processing routine used to rotate images at any
 ## imgs=[]
 ## dirs=os.listdir(path)
 ## for file in dirs:
-    ## fpat=path+"\\"+file
-    ## imgs.append(cv2.imread(fpat))
+    fpat=path+"\\"+file
+    imgs.append(cv2.imread(fpat))
 ## i=0
 ## for im in imgs:
-    ## #cv2.imshow(dirs[i],imgs[i])
-    ## i=i+1
+    #cv2.imshow(dirs[i],imgs[i])
+    i=i+1
 ## print(i)
 ## cv2.imshow('sum',len(im))
 ## cv2.imshow('mean',len(im)/im)

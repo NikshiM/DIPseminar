@@ -76,7 +76,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 OUTPUT:-
-
+![i5](https://user-images.githubusercontent.com/72375228/104286388-fbdb7780-54da-11eb-8c15-a085a14732f8.PNG)
 
 
 

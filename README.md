@@ -27,4 +27,17 @@ cv2.cvtColor() method is used to convert an image from one color space to anothe
 ## OUTPUT:
 ![i1](https://user-images.githubusercontent.com/72375228/104284807-a7cf9380-54d8-11eb-8bc4-7e0961e2aaf3.PNG)
 
+## 2. Develop a program to perform linear transformation on image. (Scaling and rotation) 
+## //Scaling
+
+import cv2 as c
+img=c.imread("img3.jpg")
+c.imshow('image',img)
+nimg=c.resize(img,(0,0),fx=0.50,fy=0.50)
+c.imshow("Result",nimg)
+c.waitKey(0)
+
+OUTPUT:-
+
+
 

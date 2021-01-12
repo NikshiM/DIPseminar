@@ -127,6 +127,9 @@ img = Image.fromarray(array)
 img.save('flower.jpg')
 img.show()
 
+numpy.zeros() function returns a new array of given shape and type, with zeros.
+Image.fromarray(array) is creating image object of above array
+
 OUTPUT:-
 
 ![i6](https://user-images.githubusercontent.com/72375228/104289209-e0726b80-54de-11eb-95ef-ea42ae76b383.PNG)

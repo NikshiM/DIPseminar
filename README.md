@@ -40,5 +40,22 @@ c.waitKey(0)
 OUTPUT:-
 ![i1](https://user-images.githubusercontent.com/72375228/104285244-52e04d00-54d9-11eb-9c41-cfba842ea83a.PNG)
 
+//Rotation
+
+import cv2 
+import numpy as np 
+img = cv2.imread('img22.jfif') 
+(rows, cols) = img.shape[:2] 
+M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 120, 1) 
+res = cv2.warpAffine(img, M, (cols, rows)) 
+cv2.imshow('image', img)
+cv2.waitKey(0) 
+cv2.imshow('result',res) 
+cv2.waitKey(0) 
+cv2.destroyAllWindows()
+
+OUTPUT:-
+
+
 
 

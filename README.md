@@ -82,6 +82,8 @@ cv2.waitKey(0)
 
 ## OUTPUT:-
 
+![i4](https://user-images.githubusercontent.com/72375228/104290398-50352600-54e0-11eb-9e50-a3bd41a313e5.PNG)
+
 
 ## 4.Write a program to convert color image into gray scale and binary image.
 Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.

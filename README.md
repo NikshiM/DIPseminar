@@ -129,6 +129,9 @@ img.show()
 
 OUTPUT:-
 
+![i6](https://user-images.githubusercontent.com/72375228/104289209-e0726b80-54de-11eb-95ef-ea42ae76b383.PNG)
+
+
 
 
 

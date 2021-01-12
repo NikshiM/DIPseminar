@@ -9,16 +9,16 @@ For other algorithms to work: There are many algorithms that are customized to w
 ## PROGRAM1:
 
 
-import cv2
-import numpy as np
-image = cv2.imread('img20.jpg')
-image = cv2.resize(image, (0, 0), None, .25, .25)
-grey = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
-grey_3_channel = cv2.cvtColor(grey, cv2.COLOR_GRAY2BGR)
-numpy_horizontal = np.hstack((image, grey_3_channel))
-numpy_horizontal_concat = np.concatenate((image, grey_3_channel), axis=1)
-cv2.imshow('flower', numpy_horizontal_concat)
-cv2.waitKey()
+## import cv2
+## import numpy as np
+## image = cv2.imread('img20.jpg')
+## image = cv2.resize(image, (0, 0), None, .25, .25)
+## grey = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+## grey_3_channel = cv2.cvtColor(grey, cv2.COLOR_GRAY2BGR)
+## numpy_horizontal = np.hstack((image, grey_3_channel))
+## numpy_horizontal_concat = np.concatenate((image, grey_3_channel), axis=1)
+## cv2.imshow('flower', numpy_horizontal_concat)
+## cv2.waitKey()
 
 cv2.resize() method refers to the scaling of images. Scaling comes handy in many image processing as well as machine learning applications. It helps in reducing the number of pixels from an image 
 cv2.cvtColor() method is used to convert an image from one color space to another. 
@@ -31,12 +31,12 @@ cv2.cvtColor() method is used to convert an image from one color space to anothe
 ## //Scaling
 Image resizing refers to the scaling of images. Scaling comes handy in many image processing as well as machine learning applications. It helps in reducing the number of pixels from an image 
 
-import cv2 as c
-img=c.imread("img3.jpg")
-c.imshow('image',img)
-nimg=c.resize(img,(0,0),fx=0.50,fy=0.50)
-c.imshow("Result",nimg)
-c.waitKey(0)
+## import cv2 as c
+## img=c.imread("img3.jpg")
+## c.imshow('image',img)
+## nimg=c.resize(img,(0,0),fx=0.50,fy=0.50)
+## c.imshow("Result",nimg)
+## c.waitKey(0)
 
 OUTPUT:-
 
@@ -45,17 +45,17 @@ OUTPUT:-
 ## //Rotation
 Image rotation is a common image processing routine used to rotate images at any desired angle. This helps in image reversal, flipping, and obtaining an intended view of the image. Image rotation has applications in matching, alignment, and other image-based algorithms. OpenCV is a well-known library used for image processing.
 
-import cv2 
-import numpy as np 
-img = cv2.imread('img22.jfif') 
-(rows, cols) = img.shape[:2] 
-M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 120, 1) 
-res = cv2.warpAffine(img, M, (cols, rows)) 
-cv2.imshow('image', img)
-cv2.waitKey(0) 
-cv2.imshow('result',res) 
-cv2.waitKey(0) 
-cv2.destroyAllWindows()
+## import cv2 
+## import numpy as np 
+## img = cv2.imread('img22.jfif') 
+## (rows, cols) = img.shape[:2] 
+## M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 120, 1) 
+## res = cv2.warpAffine(img, M, (cols, rows)) 
+## cv2.imshow('image', img)
+## cv2.waitKey(0) 
+## cv2.imshow('result',res) 
+## cv2.waitKey(0) 
+## cv2.destroyAllWindows()
 
 ## OUTPUT:-
 
@@ -63,22 +63,22 @@ cv2.destroyAllWindows()
 
 ## 3. Develop a program to find sum and mean of a set of images.Create n number of images and read the directory and perform operation.
 
-import cv2
-import os
-path = "E:\\nik"
-imgs=[]
-dirs=os.listdir(path)
-for file in dirs:
-    fpat=path+"\\"+file
-    imgs.append(cv2.imread(fpat))
-i=0
-for im in imgs:
-    #cv2.imshow(dirs[i],imgs[i])
-    i=i+1
-print(i)
-cv2.imshow('sum',len(im))
-cv2.imshow('mean',len(im)/im)
-cv2.waitKey(0)
+## import cv2
+## import os
+## path = "E:\\nik"
+## imgs=[]
+## dirs=os.listdir(path)
+## for file in dirs:
+    ## fpat=path+"\\"+file
+    ## imgs.append(cv2.imread(fpat))
+## i=0
+## for im in imgs:
+    ## #cv2.imshow(dirs[i],imgs[i])
+    ## i=i+1
+## print(i)
+## cv2.imshow('sum',len(im))
+## cv2.imshow('mean',len(im)/im)
+## cv2.waitKey(0)
 
 ## OUTPUT:-
 
@@ -89,14 +89,14 @@ cv2.waitKey(0)
 Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
 A binary image is a monochromatic image that consists of pixels that can have one of exactly two colors, usually black and white
 
-import cv2
-image=cv2.imread("img19.jpg")
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-(tresh,blackAndWhiteImage)=cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
-cv2.imshow("gray",gray)
-cv2.imshow("BINARY",blackAndWhiteImage)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+## import cv2
+## image=cv2.imread("img19.jpg")
+## gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+## (tresh,blackAndWhiteImage)=cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
+## cv2.imshow("gray",gray)
+## cv2.imshow("BINARY",blackAndWhiteImage)
+## cv2.waitKey(0)
+## cv2.destroyAllWindows()
 
 cv2.threshold works as, if pixel value is greater than a threshold value, it is assigned one value (may be white), else it is assigned another value (may be black). 
 destroyAllWindows() simply destroys all the windows we created. To destroy any specific window, use the function cv2. destroyWindow() where you pass the exact window name.
@@ -115,39 +115,42 @@ L – Represents Lightness.
 A – Color component ranging from Green to Magenta.
 B – Color component ranging from Blue to Yellow.
 
-import cv2
-image=cv2.imread("img20.jpg")
-cv2.imshow("old",image)
-cv2.waitKey()
-hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-cv2.imshow("HSV",hsv)
-cv2.waitKey(0)
-lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
-cv2.imshow("LAB",lab)
-cv2.waitKey(0)
-hls = cv2.cvtColor(image, cv2.COLOR_BGR2HLS)
-cv2.imshow("HLS",hls)
-cv2.waitKey(0)
-yuv = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
-cv2.imshow("YUV",yuv)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+## import cv2
+## image=cv2.imread("img20.jpg")
+## cv2.imshow("old",image)
+## cv2.waitKey()
+## hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+## cv2.imshow("HSV",hsv)
+## cv2.waitKey(0)
+## lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+## cv2.imshow("LAB",lab)
+## cv2.waitKey(0)
+## hls = cv2.cvtColor(image, cv2.COLOR_BGR2HLS)
+## cv2.imshow("HLS",hls)
+## cv2.waitKey(0)
+## yuv = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
+## cv2.imshow("YUV",yuv)
+## cv2.waitKey(0)
+## cv2.destroyAllWindows()
+
+cv2.cvtColor() method is used to convert an image from one color space to another. 
 
 ## OUTPUT:-
 
 ![ii](https://user-images.githubusercontent.com/72375228/104288153-73120b00-54dd-11eb-9634-4c29a761b044.PNG)
 
 ## 6.Develop a program to create an image from 2D array.
+2D array can be defined as an array of arrays. The 2D array is organized as matrices which can be represented as the collection of rows and columns. However, 2D arrays are created to implement a relational database look alike data structure.
 
-import numpy as np
-from PIL import Image
-import cv2 as c 
-array = np.zeros([100, 200, 3], dtype=np.uint8)
-array[:,:100] = [150, 128, 0] #Orange left side
-array[:,100:] = [0, 0, 255]   #Blue right side
-img = Image.fromarray(array)
-img.save('flower.jpg')
-img.show()
+## import numpy as np
+## from PIL import Image
+## import cv2 as c 
+## array = np.zeros([100, 200, 3], dtype=np.uint8)
+## array[:,:100] = [150, 128, 0] #Orange left side
+## array[:,100:] = [0, 0, 255]   #Blue right side
+## img = Image.fromarray(array)
+## img.save('flower.jpg')
+## img.show()
 
 numpy.zeros() function returns a new array of given shape and type, with zeros.
 Image.fromarray(array) is creating image object of above array

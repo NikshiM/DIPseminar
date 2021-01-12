@@ -166,3 +166,4 @@ Image.fromarray(array) is creating image object of above array
 
 
 
+

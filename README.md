@@ -83,6 +83,35 @@ OUTPUT:-
 
 ![i5](https://user-images.githubusercontent.com/72375228/104286388-fbdb7780-54da-11eb-8c15-a085a14732f8.PNG)
 
+## 5.Write a program to convert color image into different color space.
+Color spaces are a way to represent the color channels present in the image that gives the image that particular hue
+BGR color space: OpenCV’s default color space is RGB. 
+HSV color space: It stores color information in a cylindrical representation of RGB color points. It attempts to depict the colors as perceived by the human eye. Hue value varies from 0-179, Saturation value varies from 0-255 and Value value varies from 0-255. 
+LAB color space :
+L – Represents Lightness.
+A – Color component ranging from Green to Magenta.
+B – Color component ranging from Blue to Yellow.
+
+import cv2
+image=cv2.imread("img20.jpg")
+cv2.imshow("old",image)
+cv2.waitKey()
+hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+cv2.imshow("HSV",hsv)
+cv2.waitKey(0)
+lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+cv2.imshow("LAB",lab)
+cv2.waitKey(0)
+hls = cv2.cvtColor(image, cv2.COLOR_BGR2HLS)
+cv2.imshow("HLS",hls)
+cv2.waitKey(0)
+yuv = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
+cv2.imshow("YUV",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+OUTPUT:-
+
 
 
 

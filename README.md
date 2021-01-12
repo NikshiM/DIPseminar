@@ -29,6 +29,7 @@ cv2.cvtColor() method is used to convert an image from one color space to anothe
 
 ## 2. Develop a program to perform linear transformation on image. (Scaling and rotation) 
 ## //Scaling
+Image resizing refers to the scaling of images. Scaling comes handy in many image processing as well as machine learning applications. It helps in reducing the number of pixels from an image 
 
 import cv2 as c
 img=c.imread("img3.jpg")
@@ -38,9 +39,11 @@ c.imshow("Result",nimg)
 c.waitKey(0)
 
 OUTPUT:-
+
 ![i1](https://user-images.githubusercontent.com/72375228/104285244-52e04d00-54d9-11eb-9c41-cfba842ea83a.PNG)
 
 //Rotation
+Image rotation is a common image processing routine used to rotate images at any desired angle. This helps in image reversal, flipping, and obtaining an intended view of the image. Image rotation has applications in matching, alignment, and other image-based algorithms. OpenCV is a well-known library used for image processing.
 
 import cv2 
 import numpy as np 
@@ -57,5 +60,23 @@ cv2.destroyAllWindows()
 OUTPUT:-
 
 ![i3](https://user-images.githubusercontent.com/72375228/104285443-a357aa80-54d9-11eb-99fc-76fc71446222.PNG)
+
+## 3. Develop a program to find sum and mean of a set of images.Create n number of images and read the directory and perform operation.
+
+## 4.Write a program to convert color image into gray scale and binary image.
+Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
+
+import cv2
+image=cv2.imread("img19.jpg")
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+(tresh,blackAndWhiteImage)=cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
+cv2.imshow("gray",gray)
+cv2.imshow("BINARY",blackAndWhiteImage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+OUTPUT:-
+
+
 
 

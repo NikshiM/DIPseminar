@@ -65,6 +65,7 @@ OUTPUT:-
 
 ## 4.Write a program to convert color image into gray scale and binary image.
 Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
+A binary image is a monochromatic image that consists of pixels that can have one of exactly two colors, usually black and white
 
 import cv2
 image=cv2.imread("img19.jpg")
@@ -75,8 +76,14 @@ cv2.imshow("BINARY",blackAndWhiteImage)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-OUTPUT:-
+cv2.threshold works as, if pixel value is greater than a threshold value, it is assigned one value (may be white), else it is assigned another value (may be black). 
+destroyAllWindows() simply destroys all the windows we created. To destroy any specific window, use the function cv2. destroyWindow() where you pass the exact window name.
+
+OUTPUT:- 
+
 ![i5](https://user-images.githubusercontent.com/72375228/104286388-fbdb7780-54da-11eb-8c15-a085a14732f8.PNG)
+
+
 
 
 

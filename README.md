@@ -151,7 +151,12 @@ cv2.imshow("YUV",yuv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-cv2.cvtColor() method is used to convert an image from one color space to another. 
+cv2.cvtColor() method is used to convert an image from one color space to another.
+COLOR_BGR2HSV:Conver the color BGR to HSV.
+COLOR_BGR2HLS:Conver the color BGR to HLS.
+COLOR_BGR2LAB:Conver the color BGR to LAB
+COLOR_BGR2YUV:Conver the color BGR to YUV.
+
 
 ## OUTPUT:-
 ![ii](https://user-images.githubusercontent.com/72375228/104288153-73120b00-54dd-11eb-9634-4c29a761b044.PNG)

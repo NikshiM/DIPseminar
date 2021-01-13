@@ -71,23 +71,27 @@ warpAffine() function is the size of the output image, which should be in the fo
 
 import cv2
 import os
-path = "E:\\nik"
-imgs=[]
-dirs=os.listdir(path)
-for file in dirs:
-    fpat=path+"\\"+file
-    imgs.append(cv2.imread(fpat))
+path = 'C:\images'
+imgs = []
+
+files = os.listdir(path)
+for file in files:
+    filepath=path+"\\"+file
+    imgs.append(cv2.imread(filepath))
 i=0
+im = []
 for im in imgs:
-    #cv2.imshow(dirs[i],imgs[i])
+    #cv2.imshow(files[i],imgs[i])
+    im+=imgs[i]
     i=i+1
-print(i)
-cv2.imshow('sum',len(im))
-cv2.imshow('mean',len(im)/im)
+cv2.imshow("sum of five pictures",im)
+meanImg = im/len(files)
+cv2.imshow("mean of five pictures",meanImg)
 cv2.waitKey(0)
 
+
 ## OUTPUT:-
-![i4](https://user-images.githubusercontent.com/72375228/104290398-50352600-54e0-11eb-9e50-a3bd41a313e5.PNG)
+
 
 
 ## 4.Write a program to convert color image into gray scale and binary image.

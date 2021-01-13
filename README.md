@@ -180,6 +180,48 @@ Image.fromarray(array) is creating image object of above array
 ## OUTPUT:-
 ![i6](https://user-images.githubusercontent.com/72375228/104289209-e0726b80-54de-11eb-95ef-ea42ae76b383.PNG)
 
+## 7.Find the sum of all neighborhood values of the matrix.
+
+Given a  matrix and a set of cell indexes e.g., an array of (i, j) where i indicates row and j column. For every given cell index (i, j), finding sums of all matrix elements except the elements present in i’th row and/or j’th column.
+
+import numpy as np
+M = [[1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]] 
+M = np.asarray(M)
+N = np.zeros(M.shape)
+def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range() 
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: # if entry doesn't exist
+                pass
+    return sum(l)-M[x][y] # exclude the entry itself
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+print ("Original matrix:\n", M)
+print ("Summed neighbors matrix:\n", N)
+
+The append() method in python adds a single item to the existing list.
+The function "shape" returns the shape of an array. The shape is a tuple of integers. These numbers denote the lengths of the corresponding array dimension. 
+
+## OUTPUT:
+Original matrix:
+ [[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Summed neighbors matrix:
+ [[11. 19. 13.]
+ [23. 40. 27.]
+ [17. 31. 19.]]
+
+
+
+
 
 
 

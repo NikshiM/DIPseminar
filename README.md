@@ -68,6 +68,8 @@ warpAffine() function is the size of the output image, which should be in the fo
 ![i3](https://user-images.githubusercontent.com/72375228/104285443-a357aa80-54d9-11eb-99fc-76fc71446222.PNG)
 
 ## 3. Develop a program to find sum and mean of a set of images.Create n number of images and read the directory and perform operation.
+You can add two images with the OpenCV function, cv. add(), or simply by the numpy operation res = img1 + img2.
+The function mean calculates the mean value M of array elements, independently for each channel, and return it:" This mean it should return you a scalar for each layer of you image
 
 import cv2
 import os
@@ -89,6 +91,9 @@ meanImg = im/len(files)
 cv2.imshow("mean of five pictures",meanImg)
 cv2.waitKey(0)
 
+The append() method in python adds a single item to the existing list.
+listdir() method in python is used to get the list of all files and directories in the specified directory.
+
 
 ## OUTPUT:-
 ![output](https://user-images.githubusercontent.com/72375228/104420807-728e7880-55a0-11eb-9dc6-9f459dbad8c4.PNG)
@@ -97,7 +102,8 @@ cv2.waitKey(0)
 
 ## 4.Write a program to convert color image into gray scale and binary image.
 Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
-A binary image is a monochromatic image that consists of pixels that can have one of exactly two colors, usually black and white
+A binary image is a monochromatic image that consists of pixels that can have one of exactly two colors, usually black and white.
+
 
 import cv2
 image=cv2.imread("img19.jpg")
@@ -120,9 +126,12 @@ Color spaces are a way to represent the color channels present in the image that
 BGR color space: OpenCV’s default color space is RGB. 
 HSV color space: It stores color information in a cylindrical representation of RGB color points. It attempts to depict the colors as perceived by the human eye. Hue value varies from 0-179, Saturation value varies from 0-255 and Value value varies from 0-255. 
 LAB color space :
-L – Represents Lightness.
-A – Color component ranging from Green to Magenta.
-B – Color component ranging from Blue to Yellow.
+L – Represents Lightness.A – Color component ranging from Green to Magenta.B – Color component ranging from Blue to Yellow.
+The HSL color space, also called HLS or HSI, stands for:Hue : the color type Ranges from 0 to 360° in most applications 
+Saturation : variation of the color depending on the lightness.
+Lightness :(also Luminance or Luminosity or Intensity). Ranges from 0 to 100% (from black to white).
+YUV:Y refers to the luminance or intensity, and U/V channels represent color information. This works well in many applications because the human visual system perceives intensity information very differently from color information.
+
 
 import cv2
 image=cv2.imread("img20.jpg")

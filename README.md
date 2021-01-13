@@ -91,6 +91,7 @@ cv2.waitKey(0)
 
 
 ## OUTPUT:-
+![output](https://user-images.githubusercontent.com/72375228/104420807-728e7880-55a0-11eb-9dc6-9f459dbad8c4.PNG)
 
 
 

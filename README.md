@@ -1,6 +1,5 @@
 # DIPseminar
-## 1.Develop a program to display grayscale image using read and
-write operation.
+## 1.Develop a program to display grayscale image using read and write operation.
 Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
 Importance of grayscaling :-
 Dimension reduction: For e.g. In RGB images there are three color channels and has three dimensions while grayscaled images are single dimensional.
@@ -22,6 +21,9 @@ cv2.waitKey()
 
 cv2.resize() method refers to the scaling of images. Scaling comes handy in many image processing as well as machine learning applications. It helps in reducing the number of pixels from an image 
 cv2.cvtColor() method is used to convert an image from one color space to another. 
+np.hstack() function is used to stack the sequence of input arrays horizontally (i.e. column wise) to make a single array.
+np.concatenate: Concatenation refers to joining. This function is used to join two or more arrays of the same shape along a specified axis.
+cv2.imwrite() method is used to save an image to any storage device. This will save the image according to the specified format in current working directory.
 
 
 ## OUTPUT:
@@ -37,6 +39,9 @@ c.imshow('image',img)
 nimg=c.resize(img,(0,0),fx=0.50,fy=0.50)
 c.imshow("Result",nimg)
 c.waitKey(0)
+
+cv2.resize() method refers to the scaling of images. Scaling comes handy in many image processing as well as machine learning applications. It helps in reducing the number of pixels from an image 
+ imshow() function in pyplot module of matplotlib library is used to display data as an image
 
 OUTPUT:-
 ![i1](https://user-images.githubusercontent.com/72375228/104285244-52e04d00-54d9-11eb-9c41-cfba842ea83a.PNG)
@@ -55,6 +60,9 @@ cv2.waitKey(0)
 cv2.imshow('result',res) 
 cv2.waitKey(0) 
 cv2.destroyAllWindows()
+
+cv2.getRotationMatrix2D Perform the counter clockwise rotation
+warpAffine() function is the size of the output image, which should be in the form of (width, height). Remember width = number of columns, and height = number of rows.
 
 ## OUTPUT:-
 ![i3](https://user-images.githubusercontent.com/72375228/104285443-a357aa80-54d9-11eb-99fc-76fc71446222.PNG)

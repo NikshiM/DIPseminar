@@ -219,7 +219,7 @@ Summed neighbors matrix:
  [23. 40. 27.]
  [17. 31. 19.]]
  
- ## 7.Operator overloading.
+ ## 8.Operator overloading.
  C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.
  Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type.
  

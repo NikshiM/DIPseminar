@@ -218,6 +218,152 @@ Summed neighbors matrix:
  [[11. 19. 13.]
  [23. 40. 27.]
  [17. 31. 19.]]
+ 
+ ## 7.Operator overloading.
+ C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.
+ Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type.
+ 
+ #include <iostream>
+using namespace std;
+class matrix
+{
+ int r1, c1, i, j, a1;
+ int a[10][10];
+
+public:int get()
+ {
+  cout << "Enter the row and column size for the  matrix\n";
+  cin >> r1;
+  cin >> c1;
+   cout << "Enter the elements of the matrix\n";
+  for (i = 0; i < r1; i++)
+  {
+   for (j = 0; j < c1; j++)
+   {
+    cin>>a[i][j];
+
+   }
+  }
+ 
+ 
+ };
+ void operator+(matrix a1)
+ {
+ int c[i][j];
+  
+   for (i = 0; i < r1; i++)
+   {
+    for (j = 0; j < c1; j++)
+    {
+     c[i][j] = a[i][j] + a1.a[i][j];
+    }
+   
+  }
+  cout<<"addition is\n";
+  for(i=0;i<r1;i++)
+  {
+   cout<<" ";
+   for (j = 0; j < c1; j++)
+   {
+    cout<<c[i][j]<<"\t";
+   }
+   cout<<"\n";
+  }
+
+ };
+
+  void operator-(matrix a2)
+ {
+ int c[i][j];
+  
+   for (i = 0; i < r1; i++)
+   {
+    for (j = 0; j < c1; j++)
+    {
+     c[i][j] = a[i][j] - a2.a[i][j];
+    }
+   
+  }
+  cout<<"subtraction is\n";
+  for(i=0;i<r1;i++)
+  {
+   cout<<" ";
+   for (j = 0; j < c1; j++)
+   {
+    cout<<c[i][j]<<"\t";
+   }
+   cout<<"\n";
+  }
+ };
+
+ void operator*(matrix a3)
+ {
+  int c[i][j];
+
+  for (i = 0; i < r1; i++)
+  {
+   for (j = 0; j < c1; j++)
+   {
+    c[i][j] =0;
+    for (int k = 0; k < r1; k++)
+    {
+     c[i][j] += a[i][k] * (a3.a[k][j]);
+    }
+  }
+  }
+  cout << "multiplication is\n";
+  for (i = 0; i < r1; i++)
+  {
+   cout << " ";
+   for (j = 0; j < c1; j++)
+   {
+    cout << c[i][j] << "\t";
+   }
+   cout << "\n";
+  }
+ };
+
+};
+
+int main()
+{
+ matrix p,q;
+ p.get();
+ q.get();
+ p + q;
+ p - q;
+ p * q;
+return 0;
+}
+
+## OUTPUT:
+Enter the row and column size for the  matrix
+2
+2
+Enter the elements of the matrix
+6
+7
+5
+8
+Enter the row and column size for the  matrix
+2
+2
+Enter the elements of the matrix
+2
+3
+1
+4
+addition is
+ 8      10
+ 6      12
+subtraction is
+ 4      4
+ 4      4
+multiplication is
+ 19     46
+ 18     47
+
+
 
 
 

@@ -117,7 +117,7 @@ cv2.destroyAllWindows()
 cv2.threshold works as, if pixel value is greater than a threshold value, it is assigned one value (may be white), else it is assigned another value (may be black). 
 destroyAllWindows() simply destroys all the windows we created. To destroy any specific window, use the function cv2. destroyWindow() where you pass the exact window name.
 
-OUTPUT:- 
+## OUTPUT:- 
 ![i5](https://user-images.githubusercontent.com/72375228/104286388-fbdb7780-54da-11eb-8c15-a085a14732f8.PNG)
 
 ## 5.Write a program to convert color image into different color space.

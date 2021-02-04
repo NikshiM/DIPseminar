@@ -421,7 +421,9 @@ plt.subplot(132)
 plt.title("substraction")
 plt.imshow(result_image)
 ```
-   
+
+OUTPUT:
+![image](https://user-images.githubusercontent.com/72375228/106881269-23fd6700-6692-11eb-81f3-07fa8302ed7c.png)
 
 
 

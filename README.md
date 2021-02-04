@@ -235,8 +235,8 @@ Summed neighbors matrix:
  ## 8.Write a c++ program to perform Operator overloading.
  C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.
  Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type.
- 
- #include <iostream>
+``` 
+#include <iostream>
 using namespace std;
 class matrix
 {
@@ -348,7 +348,7 @@ int main()
  p * q;
 return 0;
 }
-
+```
 ## OUTPUT:
 Enter the row and column size for the  matrix
 2

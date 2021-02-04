@@ -235,7 +235,7 @@ Summed neighbors matrix:
  ## 8.Write a c++ program to perform Operator overloading.
  C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading.
  Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type.
-``` 
+``` python
 #include <iostream>
 using namespace std;
 class matrix
@@ -378,6 +378,7 @@ multiplication is
 
 ## 9.Develop a program to find the neighbor of each element in the matrix
 
+```python
 import numpy as np
 ini_array = np.array([[1, 2,5, 3], [4,5, 4, 7], [9, 6, 1,0]])
 print("initial_array : ", str(ini_array));
@@ -386,6 +387,7 @@ def neighbors(radius, rowNumber, columnNumber):
             for j in range(columnNumber-1-radius, columnNumber+radius)]
            for i in range(rowNumber-1-radius, rowNumber+radius)]
 neighbors(1,2,2)
+```
 
 
 ## OUTPUT:

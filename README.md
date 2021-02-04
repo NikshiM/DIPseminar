@@ -426,6 +426,53 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/72375228/106881269-23fd6700-6692-11eb-81f3-07fa8302ed7c.png)
 
 
+b)LOGIC OPERATION
+
+```python
+import cv2  
+import numpy as np  
+from matplotlib import pyplot as plt
+# path to input images are specified and  
+# images are loaded with imread command  
+image1 = cv2.imread('i6.jpg')  
+image2 = cv2.imread('i8.jpg')
+#cv2.imshow("original1",image1)
+#cv2.imshow("original2",image2)  
+
+# Applying a bitwise AND to our rectangle and circle
+bitwiseAnd = cv2.bitwise_and(image1,image2)
+#cv2.imshow('bitwiseAnd',bitwiseAnd)
+plt.title("AND")
+plt.imshow(bitwiseAnd)
+plt.show()
+# Applying a bitwise OR to our rectangle and circle
+bitwiseOr = cv2.bitwise_or(image1,image2)
+#cv2.imshow('bitwiseOr',bitwiseOr)
+plt.title("OR")
+plt.imshow(bitwiseOr)
+plt.show()
+# Applying a bitwise XOR to our rectangle and circle
+bitwiseXor = cv2.bitwise_xor(image1,image2)
+#cv2.imshow('bitwiseXOr',bitwiseXor)
+plt.title("XOR")
+plt.imshow(bitwiseXor)
+plt.show()
+# Applying a bitwise NOT to our rectangle
+bitwiseNot_rec = cv2.bitwise_not(image1)
+#cv2.imshow('bitwisenot img1',bitwiseNot_rec)
+plt.title("NOT on 1st image")
+plt.imshow(bitwiseNot_rec)
+plt.show()
+# Applying a bitwise NOT to our circle
+bitwiseNot_circ = cv2.bitwise_not(image2)
+#cv2.imshow('bitwisenot img2',bitwiseNot_circ)
+plt.title("NOT on 2nd image")
+plt.imshow(bitwiseNot_circ)
+plt.show()
+if cv2.waitKey(0) & 0xff == 27:  
+    cv2.destroyAllWindows() 
+```
+
 
 
 

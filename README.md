@@ -32,13 +32,14 @@ cv2.imwrite() method is used to save an image to any storage device. This will s
 ## 2. Develop a program to perform linear transformation on image. (Scaling and rotation) 
 ## //Scaling
 Image resizing refers to the scaling of images. Scaling comes handy in many image processing as well as machine learning applications. It helps in reducing the number of pixels from an image 
-
+```python 
 import cv2 as c
 img=c.imread("img3.jpg")
 c.imshow('image',img)
 nimg=c.resize(img,(0,0),fx=0.50,fy=0.50)
 c.imshow("Result",nimg)
 c.waitKey(0)
+```
 
 cv2.resize() method refers to the scaling of images. Scaling comes handy in many image processing as well as machine learning applications. It helps in reducing the number of pixels from an image 
  imshow() function in pyplot module of matplotlib library is used to display data as an image

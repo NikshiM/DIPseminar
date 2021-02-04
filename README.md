@@ -398,6 +398,29 @@ initial_array :  [[1 2 5 3]
    [[2, 5, 3],
     [5, 4, 7], 
     [6, 1, 0]]
+
+
+##Program to enhance image using image arithmetic And Logical operation.
+
+```python
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+ax=plt.subplots(figsize=(20,10))
+image1 = cv2.imread('i6.jpg')  
+image2 = cv2.imread('i8.jpg')
+sum = cv2.addWeighted(image1,0.7,image2,0.3,0)
+#add=cv2.add(image1,image2)
+plt.subplot(131)
+plt.title("sum")
+plt.imshow(sum)
+
+result_image = cv2.subtract(image1, image2)
+#sub=image1-image2
+plt.subplot(132)
+plt.title("substraction")
+plt.imshow(result_image)
+```
    
 
 
